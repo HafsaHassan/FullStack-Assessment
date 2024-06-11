@@ -48,7 +48,6 @@ const reducerCounter = (state = initialState, action) => {
     }
 }
 ```
-
 Advantages of SSOT would be:
 
 Consistancy: Since the data is only stored in one place, there will be no duplicate entries to maintain, which would also reduce version control problems. Redux also implements a one way directional pattern, therefore, there will only be one process to add/change/remove the data from the state.
@@ -60,10 +59,55 @@ Simplified Testing: Redux allows for reducers and actions to be tested separatel
 Overall, having a SSOT like Redux poses many benefits which makes it easier to maintain data and reduce time taken to fix issues, since there is only one location to look for.
 
 ## Question 3
+Stateful components, in React, hold infomration and data about their components. The component state can be altered, through re-rendering. When the attrubutes of a state are changed, the component is also changed. Stateful components hold their own state through "this.state" or "useState" components, for example. Content can be rendered, based on the state, so if changes are made the components will re-reder and show the new state. 
 
+Stateless components 
 
+Unlike stateful components, stateless ones do not manage their own state and instead rely on props passed from their parent componenents, therefore they have no state management. Stateless components are important for UI elements and optimising performance.
+
+Differences:
+
+- Stateful componenets are usually more complex due to data handeling and logic compared to stateless componenents.
+
+- Stateless components are simple and more focused on UI through props and rendering static content.
+
+- The re-rendering aspect of stateful components can cause them to be less efficient, when not managed correctly, compared to stateless ones.
+
+However, it is worth mentioning since the introduction of React Hooks, the gap between stateless and stateful components has been bridged since the Hooks allow for funcational components, normally stateless, to also manage state. 
+
+Below is an example code snippet of a stateful component and stateless component:
+
+Stateful.js
+
+```js
+const Counter = () => {
+    const [count, setCount] = useState(0);
+
+    const inreaseCount = () => {
+        setCount(count + 1);
+    }
+
+    return (
+        <div>
+            <p> Count: {count}</p>
+            <button> onClick = {increaseCount}>Increase</button>
+        </div>
+    )
+}
+```
+
+Stateless.js
+
+```js
+const Greeting = (props) => {
+    return <p> Hello, {props.name} </p>
+};
+```
 
 ## Question 4
+List out the advantages and disadvantages of exploratory testing (used in Agile) and scripted testing?
+
+
 
 
 
