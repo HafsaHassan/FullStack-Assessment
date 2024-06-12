@@ -23,7 +23,26 @@ else if (action.type === 'reset') {
 
 # Question 2
 
+1. The state is being initialised with studentsCount and is being set to the value 0, the setStudentCount will update the state. The number of students in a class is being returned/displayed, from the state - studentsCount. Next there is a button that adds a student when it is clicked but the function is missing.
+
+2. 
+    First the students data would be put into an array. 
+    Then a function would be created to count the number of students. 
+    A counter would be added starting at 0, then the student data array would need to be looped through to check if the student is present (value would need to be true). 
+    An if statement would be used for this and if true then the counter would increase. 
+    Then the counter would be returned. 
+    A new function would need to be made to update the student count, the function which was counting the number of students would be called to get the number of present students.
+    Then the state would be updated with a function to set the students count with the value from the function counting the present students.
+    Lastly, the onClick button would be updated with an event handler to call on the updated student count function.
+
 # Question 3
+
+1. The payload was added and by doing this the state's value will change with the payload in the action. If the increment action in line 170 is true then the payload will increment its value by 1.
+
+2. To do this, the reducer and inital state would need to be set up in our component and would need to dispatch an action with the right payload when the button is clicked.
+
+3.  The best suited solution is figure 2 because the increment action updates the state with the correct number of students that are present as it sets the exact number of students present every time the button is clicked. Whereas, figure 1 could give incorrect values when the increment is used lots of different times without considering the values from the beginning.
+
 
 ## Section 2 Coding
 
