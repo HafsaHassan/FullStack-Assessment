@@ -46,7 +46,28 @@ else if (action.type === 'reset') {
 
 ## Section 2 Coding
 
+```js
+function isPalindromeTrue(str) {
+    let reversedStr = "";
 
+    for (let i = str.length - 1;
+        i >= 0;
+        i--) {
+            reversedStr += str[i];
+        }
+
+        if (str === reversedStr) {
+            return true;
+        } else {
+            return false;
+    }
+}
+
+console.log(isPalindromeTrue("radar")); // true
+console.log(isPalindromeTrue("level")); //true
+console.log(isPalindromeTrue("pencil")); // false
+console.log(isPalindromeTrue("a")); // true
+```
 
 ## Section 3 Theory
 
